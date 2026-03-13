@@ -1,0 +1,260 @@
+:root {
+    --primary: #7367f0;      
+    --secondary: #5eead4;    
+    --text: #1e1e1e;         
+    --bg: #f5f5fa;           
+    --card-bg: #ffffff;
+    --border: #e5e5f0;
+    --muted: #9ca3af;
+    --error: #ef4444;
+    --success: #22c55e;
+    --shadow: rgba(0, 0, 0, 0.08);
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  #root {
+    max-width: 380px;
+    width: 100%;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    overflow-y: auto;
+    min-height: 100vh; 
+    height: auto;
+    margin-top: 10px; 
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    background: white;
+    border-bottom: 1px solid var(--border);
+    font-weight: 600;
+  }
+  
+  .logo {
+    color: var(--primary);
+    font-size: 1.2rem;
+  }
+  
+  .search {
+    background: #f2f2f8;
+    border: none;
+    border-radius: 10px;
+    padding: 6px 10px;
+    width: 70%;
+  }
+  
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 16px;
+    box-shadow: 0 2px 8px var(--shadow);
+  }
+  
+  button,
+  .small-btn,
+  a.small-btn {
+    display: inline-block;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: 0.2s ease-in-out;
+  }
+  
+  button.primary,
+  .small-btn.primary {
+    background: var(--primary);
+    color: white;
+  }
+  
+  button.secondary,
+  .small-btn.secondary {
+    background: var(--secondary);
+    color: var(--text);
+  }
+  
+  button.secondary:hover {
+    background: #4fd3c6;
+  }
+  
+  button.primary:hover {
+    background: #5c52d5;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: #fafafa;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: var(--primary);
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  .quiz-option {
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    padding: 10px;
+    border-radius: 12px;
+    margin: 6px 0;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .quiz-option:hover {
+    background: #ede9fe;
+    border-color: var(--primary);
+  }
+  
+  .quiz-option.selected {
+    background: var(--primary);
+    color: white;
+  }
+  
+  .quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 18px;
+    margin-top: 10px;
+  }
+  
+  .timer {
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  
+  ul {
+    padding-left: 18px;
+    margin-top: 10px;
+  }
+  
+  li {
+    margin: 6px 0;
+  }
+  
+  .bottom-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  
+  @media (max-width: 480px) {
+    body {
+      padding: 10px;
+    }
+  
+    #root {
+      border-radius: 30px;
+      max-width: 380px;
+      min-height: 90vh;
+      margin: auto;
+      overflow: hidden;
+    }
+  
+    .quiz-header {
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .quiz-option {
+      font-size: 0.95rem;
+      text-align: left;
+    }
+  
+    .bottom-buttons {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+  }
+  
+  .question-block {
+    margin-bottom: 25px;
+  }
+  
+  .quiz-option {
+    background: #f7f7fb;
+    border: 1px solid #e2e2ea;
+    border-radius: 12px;
+    padding: 12px 15px;
+    margin: 8px 0;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 0.95rem;
+  }
+  
+  .quiz-option:hover {
+    background: #ebe9fe;
+  }
+  
+  .quiz-option.selected {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+  }
+  
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .option-btn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: #f7f7fb;
+    border: 1px solid #e2e2ea;
+    border-radius: 12px;
+    padding: 12px 14px;
+    margin: 10px 0;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .option-btn:hover {
+    background: #ebe9fe;
+    border-color: var(--primary);
+  }
+  
+  .option-btn.selected {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+    transform: scale(1.02);
+  }
+  
